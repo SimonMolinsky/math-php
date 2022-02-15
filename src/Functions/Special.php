@@ -1181,6 +1181,13 @@ class Special
             $I = 0;
             do {
                 $I_new = self::iBetaCF($m, $x, $a, $b);
+
+                // For some cases incomplete beta cf will return 0 and
+                // to avoid ZeroDivisionError it should be stopped after I_new reaches zero!
+                if ($I_new == 0) {
+                    return $I;
+                }
+
                 if ($m > 10) {
                     $dif = \abs(($I - $I_new) / $I_new);
                 }

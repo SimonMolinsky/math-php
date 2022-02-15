@@ -2,9 +2,10 @@
 
 namespace MathPHP\Statistics;
 
+use MathPHP\Probability\Distribution\Continuous\ChiSquared;
 use MathPHP\Probability\Distribution\Continuous\StandardNormal;
 use MathPHP\Probability\Distribution\Continuous\StudentT;
-use MathPHP\Probability\Distribution\Continuous\ChiSquared;
+
 use MathPHP\Exception;
 
 /**
